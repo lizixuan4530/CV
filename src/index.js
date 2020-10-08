@@ -19,7 +19,7 @@ ReactDOM.render((
     <Router>
         <Switch>
         <Route path="/" component={App}>
-            <Route path="/welcome" component={welcome}/>
+            <Route path="*" component={welcome}/>
         </Route>
         </Switch>
     </Router>

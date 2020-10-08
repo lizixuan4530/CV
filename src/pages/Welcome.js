@@ -4,7 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
-import FavoriteRoundedIcon from '@material-ui/icons/FavoriteRounded';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import TabPanel from './aboutme';
 import Fade from 'react-reveal/Fade';
@@ -20,7 +19,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justify: 'center',
     textAlign: 'center',
-    margin: '14%',
+    marginRight:'14%',
+    marginLeft:'14%',
+    paddingTop:'7%',
+    paddingBottom:'7%'
   },
   text:{
     color: 'White',
@@ -36,9 +38,21 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: '70%',
     height: '70%',
+    alignContent:'center',
+    alignItems:'center',
+  },
+  image2: {
+    width: '100%',
+    height: '100%',
+  },
+  img2: {
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
   },
   img: {
-    margin: '20%',
+    marginLeft: '20%',
+    marginBottom: '10%',
     display: 'block',
     maxWidth: '100%',
     maxHeight: '100%',
@@ -62,26 +76,12 @@ export default function CenteredGrid() {
     <div className={classes.root} >
      
       <Grid container spacing={2} style={{backgroundColor: "#f1e7e7"}}>
-        <Grid item xs={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
-        <Fade left cascade>
-          <Paper className={classes.Paper} elevation={3}>
-         
-            <p className={classes.text}>Hello, I'm Zixuan LI</p>
-            <p className={classes.text} style={{display: 'inline'}}>A </p>
-            <p className={classes.text} style={{color: '#793D3D', fontWeight:'700' , display: 'inline'}}>Web developer </p>
-            <p className={classes.text} >based in Paris</p>
-        
-            <p className={classes.text} > NICE TO MEET YOU
-            <FavoriteRoundedIcon style={{fontSize:'35px',color: '#793D3D'}}/>
-            </p>
 
-            <p/>
-           
-          </Paper>
-          </Fade>
+      <Grid item xs={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
         </Grid>
-        <Grid item xs={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
-          <Breadcrumbs aria-label="breadcrumb" style={{float: 'right', padding: '5%'}}  className={classes.link}>
+
+      <Grid item xs={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
+          <Breadcrumbs aria-label="breadcrumb" style={{float: 'right',paddingRight:'5%', paddingTop:'30px' }}  className={classes.link}>
              <Link onClick={ScrolltoAbout} className={classes.link}>
                 About me
              </Link>
@@ -89,6 +89,22 @@ export default function CenteredGrid() {
                 Contact
              </Link>
            </Breadcrumbs>
+
+        </Grid>
+
+
+        <Grid item xs={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
+        <Fade left cascade>
+          <Paper className={classes.Paper} elevation={3}>
+         
+          <Grid item className={classes.image2}>
+              <img className={classes.img2} alt="img" src={require('../img/img2.jpg')}/>
+          </Grid>
+           
+          </Paper>
+          </Fade>
+        </Grid>
+        <Grid item xs={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
            <Fade right cascade>
            <Grid item className={classes.image}>
               <img className={classes.img} alt="img" src={require('../img/img1.jpg')}/>

@@ -7,6 +7,7 @@ import Link from '@material-ui/core/Link';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import CallIcon from '@material-ui/icons/Call';
 
 const useStyles = makeStyles((theme) => ({
@@ -44,6 +45,10 @@ function handleLinkedInPage() {
     window.open("https://www.linkedin.com/in/zixuan-li-0ba0ab170/",'_blank')
     }
 
+function handleGitPage() {
+    window.open("https://github.com/lizixuan4530/",'_blank')
+    }
+
 export default function Contact() {
   const classes = useStyles();
 
@@ -61,6 +66,10 @@ export default function Contact() {
         
          <IconButton>
             <LinkedInIcon className={classes.icon} onClick={handleLinkedInPage}/>
+         </IconButton>
+
+         <IconButton>
+            <GitHubIcon className={classes.icon} onClick={handleGitPage}/>
          </IconButton>
         
          <Tooltip title="+33 0665448155" aria-label="number">
