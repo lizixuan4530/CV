@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 
 import p1 from '../img/p1.jpg';
 import p2 from '../img/p2.jpg';
@@ -79,7 +78,7 @@ const foodData = [
         {
           img: f1,
           title: 'ARABICA',
-          address: '44-47 Passage des Panoramas, 75002 Paris',
+          add: '44-47 Passage des Panoramas, 75002 Paris',
         },
         {
          img: f2,
