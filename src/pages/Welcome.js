@@ -46,14 +46,12 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
   },
   img2: {
-    display: 'block',
     maxWidth: '100%',
     maxHeight: '100%',
   },
   img: {
     marginLeft: '20%',
     marginBottom: '10%',
-    display: 'block',
     maxWidth: '100%',
     maxHeight: '100%',
   },
@@ -77,10 +75,10 @@ export default function CenteredGrid() {
      
       <Grid container spacing={2} style={{backgroundColor: "#f1e7e7"}}>
 
-      <Grid item xs={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
+      <Grid item xs={12} lg={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
         </Grid>
 
-      <Grid item xs={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
+      <Grid item xs={12} lg={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
           <Breadcrumbs aria-label="breadcrumb" style={{float: 'right',paddingRight:'5%', paddingTop:'30px' }}  className={classes.link}>
              <Link onClick={ScrolltoAbout} className={classes.link}>
                 About me
@@ -93,7 +91,7 @@ export default function CenteredGrid() {
         </Grid>
 
 
-        <Grid item xs={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
+        <Grid item xs={12} lg={6} style={{backgroundColor:"#B9A7A5", justify:"center" ,alignItems:"center"}}>
         <Fade left cascade>
           <Paper className={classes.Paper} elevation={3}>
          
@@ -104,7 +102,7 @@ export default function CenteredGrid() {
           </Paper>
           </Fade>
         </Grid>
-        <Grid item xs={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
+        <Grid item xs={12} lg={6} style={{float: 'right', border:0, margin:0,backgroundColor:"#EDD2C7"}}>
            <Fade right cascade>
            <Grid item className={classes.image}>
               <img className={classes.img} alt="img" src={require('../img/img1.jpg')}/>

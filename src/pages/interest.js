@@ -1,8 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 import p1 from '../img/p1.jpg';
 import p2 from '../img/p2.jpg';
@@ -29,6 +26,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import Fade from 'react-reveal/Fade';
+import PicGrid from './pics';
+
 const picStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -40,6 +39,13 @@ const picStyles = makeStyles((theme) => ({
   gridList: {
     width: '70%',
     height: '70%',
+    [theme.breakpoints.down('xs')]:{
+      width: '100%',
+      height: '100%',
+    }
+  },
+  gridItemSmall: {
+    alignItems: 'center',
   },
   pic: {
     '&:hover ': {
@@ -151,10 +157,10 @@ const foodData = [
          title: 'Frenchie Bar à Vins',
          address: '6 Rue du Nil, 75002 Paris',
        },]
-     
+
 export default function interest() {
   const classes = picStyles();
-
+ 
   return (
     <div align="center">
         <Paper  elevation={3}  style={{backgroundColor:"#D9755B", margin: '30px', padding:'10px'}}>
@@ -167,18 +173,11 @@ export default function interest() {
             </Box>
         </Typography>
         </Paper>
+
       <Fade>
-      <GridList cellHeight={300} spacing={8} className={classes.gridList} cols={3}>
-        {tileData.map((tile) => (
-          <GridListTile key={tile.img} className={classes.pic}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar className={classes.addIcon}
-              title={tile.title}
-              subtitle={<span>{tile.time}</span>}
-            />
-          </GridListTile>
-        ))}
-      </GridList>
+      
+      <PicGrid myArrayItem = {tileData}></PicGrid>
+
       </Fade>
 
       <Paper  elevation={3}  style={{backgroundColor:"#F6D794", margin: '30px', padding:'10px'}}>
@@ -187,23 +186,14 @@ export default function interest() {
               Food blogger:
             </Box>
             <Box textAlign="center" fontFamily='"Segoe UI"' style={{color:"#D9755B"}} fontWeight="fontWeightBold" fontSize={15}>
-              I like to eat so much that I want to share with everyone ╰(*°▽°*)╯
+              I like eat so much that I want to share with everyone ╰(*°▽°*)╯
             </Box>
         </Typography>
         </Paper>
       <Fade>
-      <GridList 
-            cellHeight={300} spacing={8} className={classes.gridList} cols={3}>
-        {foodData.map((tile) => (
-          <GridListTile key={tile.img} className={classes.pic}>
-            <img src={tile.img} alt={tile.title}/>          
-            <GridListTileBar className={classes.addIcon}
-              title={tile.title}
-              subtitle={tile.address}
-            />             
-          </GridListTile>
-        ))}
-      </GridList>
+
+      <PicGrid myArrayItem = {foodData}></PicGrid>
+      
       </Fade>
     </div>
   );
