@@ -68,7 +68,7 @@ const MyComponent = props => {
             <img src={item.img} alt={item.title} />
             <GridListTileBar className={classes.addIcon}
               title={item.title}
-              subtitle={<span>{item.time}</span>}
+              subtitle={<span>{item.add}</span>}
             />
           </GridListTile>
         ))

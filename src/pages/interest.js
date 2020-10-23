@@ -28,87 +28,51 @@ import Typography from '@material-ui/core/Typography';
 import Fade from 'react-reveal/Fade';
 import PicGrid from './pics';
 
-const picStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: '70%',
-    height: '70%',
-    [theme.breakpoints.down('xs')]:{
-      width: '100%',
-      height: '100%',
-    }
-  },
-  gridItemSmall: {
-    alignItems: 'center',
-  },
-  pic: {
-    '&:hover ': {
-      "& $addIcon": {
-        visibility: 'visible',
-      }
-    },
-  },
-  addIcon: {
-    height: 70,
-    width: '100%',
-    visibility: 'hidden',
-  },
-  icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
-  },
-}));
-
 const tileData = [
        {
          img: p1,
          title: 'La Grand Motte, France',
-         time: '08/2020',
+         add: '08/2020',
        },
        {
         img: p2,
         title: 'La Grand Motte, France',
-        time: '08/2020',
+        add: '08/2020',
       },
       {
         img: p3,
         title: 'Paris, France',
-        time: '06/2019',
+        add: '06/2019',
       },
       {
         img: p4,
         title: 'Paris, France',
-        time: '09/2019',
+        add: '09/2019',
       },
       {
         img: p5,
         title: 'Paris, France',
-        time: '05/2020',
+        add: '05/2020',
       },
       {
         img: p6,
         title: 'Anterwep, Belgium',
-        time: '10/2017',
+        add: '10/2017',
       },
       {
         img: p7,
         title: 'Thira, Greece',
-        time: '12/2018',
+        add: '12/2018',
       },
       {
         img: p8,
         title: 'Lisbon, Portugal',
-        time: '09/2019',
+        add: '09/2019',
       },
       {
         img: p9,
         title: 'Interlaken, Swiss',
-        time: '12/2017',
+        add: '12/2017',
       },]
 
 const foodData = [
@@ -120,46 +84,45 @@ const foodData = [
         {
          img: f2,
          title: 'Carré Pain De Mie',
-         address: '5 Rue Rambuteau, 75004 Paris',
+         add: '5 Rue Rambuteau, 75004 Paris',
        },
        {
          img: f3,
          title: 'La Péniche',
-         address: 'Prom. Michel d\'Ornano, 14800 Deauville',
+         add: 'Prom. Michel d\'Ornano, 14800 Deauville',
        },
        {
          img: f4,
          title: 'ANCO',
-         address: '108 Rue de Bercy, 75012 Paris',
+         add: '108 Rue de Bercy, 75012 Paris',
        },
        {
          img: f5,
          title: 'Robert et Louise',
-         address: '64 Rue Vieille du Temple, 75003 Paris',
+         add: '64 Rue Vieille du Temple, 75003 Paris',
        },
        {
          img: f6,
          title: 'Hero',
-         address: '289 Rue Saint-Denis, 75002 Paris',
+         add: '289 Rue Saint-Denis, 75002 Paris',
        },
        {
          img: f7,
          title: 'Dersou',
-         address: '21 Rue Saint-Nicolas, 75012 Paris',
+         add: '21 Rue Saint-Nicolas, 75012 Paris',
        },
        {
          img: f8,
          title: 'Kott Café',
-         address: '19 Rue Ternaux, 75011 Paris',
+         add: '19 Rue Ternaux, 75011 Paris',
        },
        {
          img: f9,
          title: 'Frenchie Bar à Vins',
-         address: '6 Rue du Nil, 75002 Paris',
+         add: '6 Rue du Nil, 75002 Paris',
        },]
 
 export default function interest() {
-  const classes = picStyles();
  
   return (
     <div align="center">
